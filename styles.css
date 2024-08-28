@@ -26,14 +26,14 @@ header {
 header h1 {
   
   margin: 0;
-  /*margin-inline-end: 1010px;
-  /* Ajusta el tamaño de fuente según necesites */
+  margin-inline-end: 1010px;
+  
   font-size: 2.5rewm;
 }
 
 header nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   gap: 0.5rem;
 }
@@ -131,6 +131,7 @@ button {
   cursor: pointer;
   background-color: orange;
   color: white;
+  box-shadow: 2px 2px 5px gray;
 
 
 }
