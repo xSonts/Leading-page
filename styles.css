@@ -4,7 +4,7 @@
 :root{
   --fondo: rgb(255, 252, 248);
   --contrast: #fff3f3;
-  --fuerteColor:orange;
+  --primario:orange;
 }
 
 body {
@@ -44,7 +44,7 @@ nav a {
   min-width: 7rem; /* Reducido para ajustarse mejor */
   padding: 0.5rem;
   border-radius: 0.2rem;
-  border: solid 1px var(--fuerteColor);
+  border: solid 1px var(--primario);
   text-align: center;
   text-decoration: none;
   color: black; /* Asegúrate de que el texto sea visible */
@@ -52,12 +52,12 @@ nav a {
 
 nav a[aria-current='page'] {
   color: white;
-  background-color: var(--fuerteColor);
+  background-color: var(--primario);
 }
 
 header nav a:hover {
 
-  background-color:var(--fuerteColor);
+  background-color:var(--primario);
   color: white;
 }
 
@@ -68,7 +68,7 @@ main {
 h1 {
   font-weight: bold;
   font-size: 2.5rem;
-  color: var(--fuerteColor);
+  color: var(--primario);
 }
 
 
@@ -80,8 +80,8 @@ h1 {
   align-items: center;
   padding: 1rem;
   min-height: 80vh; /* Esto ayudará a centrar verticalmente en la pantalla */
-  border-top: var(--fuerteColor) solid;
-  border-bottom: var(--fuerteColor) solid;
+  border-top: var(--primario) solid;
+  border-bottom: var(--primario) solid;
   margin-inline: 15px;
   
 }
@@ -119,7 +119,7 @@ input[type="text"] {
   margin-top: 20px;
   padding: 0.5rem;
   margin-right: 10px;
-  border: 1px solid var(--fuerteColor);
+  border: 1px solid var(--primario);
   border-radius: 5px;
   width: 70%;
   color: black;
@@ -131,10 +131,10 @@ button {
   font-weight: bold;
   margin-top: 20px;
   padding: 0.5rem 1rem;
-  border: solid var(--fuerteColor);
+  border: solid var(--primario);
   border-radius: 5px;
   cursor: pointer;
-  background-color: var(--fuerteColor);
+  background-color: var(--primario);
   color: white;
   box-shadow: 2px 2px 5px gray;
 
@@ -142,7 +142,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--fuerteColor);
+  background-color: var(--primario);
   color: white;
 }
 
@@ -152,7 +152,7 @@ button:hover {
     width: 70%;
   }
 
-  @media screen and (max-width: 628px) {
+@media screen and (max-width: 628px) {
 
     header h1 {
       font-size: 2rem;
@@ -196,6 +196,14 @@ button:hover {
       width:50%;
       width: auto;
       text-align: center;
+    }
+  }
+  @media screen and (max-width: 418px) {
+    header{
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      display: block;
     }
   }
 
