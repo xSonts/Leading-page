@@ -4,6 +4,7 @@
 :root{
   --fondo: rgb(255, 252, 248);
   --contrast: #fff3f3;
+  --fuerteColor:orange;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
 }
 
 header {
+  max-width: 100%;
   margin-top: 10px;
   margin-inline: 15px;
   display: flex;
@@ -26,7 +28,6 @@ header {
 header h1 {
   text-shadow: 1px 1px 2px gray;
   margin: 0;  
-  margin-inline-end: 1400px;
   font-size: 2.5rem;
 }
 
@@ -38,12 +39,12 @@ header nav {
 }
 
 nav a {
-  height: 40px;
+  height: 5%;
   display: inline-block;
   min-width: 7rem; /* Reducido para ajustarse mejor */
   padding: 0.5rem;
   border-radius: 0.2rem;
-  border: solid 1px orange;
+  border: solid 1px var(--fuerteColor);
   text-align: center;
   text-decoration: none;
   color: black; /* Asegúrate de que el texto sea visible */
@@ -51,12 +52,12 @@ nav a {
 
 nav a[aria-current='page'] {
   color: white;
-  background-color: orange;
+  background-color: var(--fuerteColor);
 }
 
 header nav a:hover {
 
-  background-color:orange;
+  background-color:var(--fuerteColor);
   color: white;
 }
 
@@ -67,7 +68,7 @@ main {
 h1 {
   font-weight: bold;
   font-size: 2.5rem;
-  color: orange;
+  color: var(--fuerteColor);
 }
 
 
@@ -79,8 +80,8 @@ h1 {
   align-items: center;
   padding: 1rem;
   min-height: 80vh; /* Esto ayudará a centrar verticalmente en la pantalla */
-  border-top: orange solid;
-  border-bottom: orange solid;
+  border-top: var(--fuerteColor) solid;
+  border-bottom: var(--fuerteColor) solid;
   margin-inline: 15px;
   
 }
@@ -118,7 +119,7 @@ input[type="text"] {
   margin-top: 20px;
   padding: 0.5rem;
   margin-right: 10px;
-  border: 1px solid orange;
+  border: 1px solid var(--fuerteColor);
   border-radius: 5px;
   width: 70%;
   color: black;
@@ -130,10 +131,10 @@ button {
   font-weight: bold;
   margin-top: 20px;
   padding: 0.5rem 1rem;
-  border: solid orange;
+  border: solid var(--fuerteColor);
   border-radius: 5px;
   cursor: pointer;
-  background-color: orange;
+  background-color: var(--fuerteColor);
   color: white;
   box-shadow: 2px 2px 5px gray;
 
@@ -141,7 +142,7 @@ button {
 }
 
 button:hover {
-  background-color: orange;
+  background-color: var(--fuerteColor);
   color: white;
 }
 
@@ -151,39 +152,50 @@ button:hover {
     width: 70%;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 628px) {
+
     header h1 {
-      flex: 0 1 auto;
-      margin-inline-end: 0;
+      font-size: 2rem;
     }
-  
-    header nav {
-      width: auto;
-      margin-top: 0;
+    nav{
+      height: 2%;
     }
-  
+    nav a{
+      margin-bottom: 2%;
+      display: inline-block;
+      min-width: 7rem; /* Reducido para ajustarse mejor */
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+
     .contenedor {
       flex-direction: column;
-    }
-  
-    .informacion {
+      text-align: center;
       justify-content: center;
       align-items: center;
-      flex: 0 1 60%;
-      text-align: left;
-    }
-    .informacion h1,.informacion p{
-      text-align: center;
-    }
-  
-    .imagen {
-      visibility: hidden;
-      display: none;
 
     }
   
+    .informacion, .imagen {
+      max-width: 100%;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .imagen img{
+      width: 50%;
+      height: auto;
+    }
+
+    .informacion h1,.informacion p{
+      text-align: center;
+    }
     input[type="text"], button {
+      width:50%;
       width: auto;
+      text-align: center;
     }
   }
 
