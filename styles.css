@@ -24,6 +24,7 @@ header {
 }
 
 header h1 {
+  text-shadow: 1px 1px 2px gray;
   margin: 0;  
   margin-inline-end: 1400px;
   font-size: 2.5rem;
@@ -108,6 +109,10 @@ h1 {
   height: auto;
   border-radius: 5px;
 }
+.imagen h1{
+  text-shadow: 1px 1px 2px gray;
+
+}
 
 input[type="text"] {
   margin-top: 20px;
@@ -140,37 +145,45 @@ button:hover {
   color: white;
 }
 
-@media (max-width: 500px) {
-  header {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-  }
-  
-  .contenedor {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 
-  .informacion {
-    flex: 0 1 60%;
-    font-size: 1.25rem;
-    align-items:start ;
-  }
-
-  .imagen {
-    flex: 1;
-    max-width: 40%;
-    text-align: center;
-  }
 
   input[type="text"] {
     width: 70%;
   }
-}
 
+  @media screen and (max-width: 768px) {
+    header h1 {
+      flex: 0 1 auto;
+      margin-inline-end: 0;
+    }
+  
+    header nav {
+      width: auto;
+      margin-top: 0;
+    }
+  
+    .contenedor {
+      flex-direction: column;
+    }
+  
+    .informacion {
+      justify-content: center;
+      align-items: center;
+      flex: 0 1 60%;
+      text-align: left;
+    }
+    .informacion h1,.informacion p{
+      text-align: center;
+    }
+  
+    .imagen {
+      visibility: hidden;
+      display: none;
+
+    }
+  
+    input[type="text"], button {
+      width: auto;
+    }
+  }
 
